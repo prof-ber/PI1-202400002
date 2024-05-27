@@ -1,2 +1,9 @@
 # PI1-202400002
 Vitrine da Mente - Projeto integrador da turma 202400002 do Senac
+# Contexto
+Enfrentamos um momento pós-pandêmico no qual se torna cada vez mais evidente a necessidade de cada pessoa de cuidar da sua saúde mental. Uma em cada quatro pessoas já sofreu ou sofre com ansiedade, depressão, ou outros transtornos e problemas de saúde mental. Esse problema também afeta a juventude: 14% dos adolescentes sofrem de transtornos e problemas de saúde mental. Neste contexto, é relevante desenvolver maneiras de promover o cuidado da saúde mental. Há mais de 4,7 bilhões de pessoas conectadas à internet em todo o mundo, e mais de 150 milhões de pessoas conectadas à internet no Brasil. Desta maneira, a web se torna um veículo relevante para a promoção de cuidados de saúde mental devido ao seu grande número de usuários.
+Este repositório corresponde ao Projeto Integrador Desenvolvedor Front-End. Cujo tema gerador é “promoção do cuidado da saúde mental pela web”, formulado de acordo com a demanda da Turma de aprendizagem. O projeto é modelado de maneira a exercitar as competências do perfil de conclusão. A articulação do tema gerador  permite o exercício das competências do curso para a solução de um problema de maneira a integrá-las.
+# Objetivo
+Desenvolver o site “Vitrine da Mente” em conjunto com a Turma de Aprendizagem 202400XX. Instanciando um processo de projeto web participativo onde a Turma 20240002 age como equipe de desenvolvimento (e doravante é referida como tal) e a Turma 202400XX age como clientes (e doravante é referida como tal).
+# Público-Alvo
+Pessoas com transtornos mentais, ansiedade, depressão, deficiências cognitivas e outras formas de neurodiversidade. O desenvolvimento demanda atenção especial a adultos mais velhos e idosos que não têm letramento digital, bem como pessoas de baixa renda.
