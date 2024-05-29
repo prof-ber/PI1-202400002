@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrossel sem Imagem</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 </head>
 <body>
     <meta charset="UTF-8">
@@ -15,8 +16,13 @@
 </head>
 <body>
 
+<script type="module">
+import { createRoot } from 'react-dom/client';
 
+document.body.innerHTML = '<div id="app></div>';
 
-    
+const root = createRoot(document.getElementById('app'));
+root.render(<h1>Hello, word</h1>);
+</script>
 </body>
 </html>
