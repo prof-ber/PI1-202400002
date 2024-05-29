@@ -3,10 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="simples.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="jogo"></div>
+    <header role="banner">
+        <h1>Bem-vindos ao Vitrine da Mente</h1>
+    </header>
+    <nav role="navigation">
+        <ul>
+            <a href="index.html">Início</a>
+            <a href="profissionais.html">Profissionais</a>
+            <a href="jogo.html">Jogo da memória</a>
+            <a href="simples.html">Página simples</a>
+            <a href="palestras.html">Palestras</a>
+        </ul>
+    </nav>
+    <main role="main">
+        <section>
+            <h2>Sobre nós</h2>
+            <p>O Vitrine da Mente é dedicado a oferecer um ambiente acolhedor para pessoas em necessidade, enquanto aprimora as capacidades mentais de todos os nossos visitantes. Nosso objetivo é proporcionar suporte e recursos que promovam o bem-estar mental e o crescimento pessoal.</p>
+        </section>
+        <section>
+            <h2>Serviços</h2>
+            <p>Nossos serviços incluem:</p>
+            <ul>
+                <li>Consultoria especializada</li>
+                <li>Palestras sobre bem-estar mental</li>
+                <li>Recursos educativos</li>
+                <li>Workshops interativos</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contato</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2024 Vitrine da Mente. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
