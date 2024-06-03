@@ -12,10 +12,9 @@
 <body>
     <div id="app"></div>
     <script type="text/babel">
-        const { useState, useEffect } = React; // Destructure useState and useEffect from React
-
+        const { useState, useEffect } = React;
         const figuras = [ "😀","😂","😍","🤔","😎","😢","😡","😱","😴","😷","🤯","🥳","🥺","😇","🤖","👽","👻","🐱"];
-        const descricoes = ["sorriso", ]
+        const descricoes = ["sorriso", "chorando de rir", "apaixonado", "pensativo", "de óculos escuros", "chorando", "zangado", "assustado", "dormindo", "doente", "cabeça explodindo", "comemorando", "implorando", "angelical", "robô", "alienígena", "fantasma", "gato"];
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -25,9 +24,11 @@
         }
         function inicializarBaralho() {
             const baralho = [];
+            let grupo = 0;
             figuras.forEach((figura, index) => {
-                baralho.push({ id: index * 2, figura, matched: false, pairIndex: 0});
-                baralho.push({ id: index * 2 + 1, figura, matched: false, pairIndex: 1});
+                baralho.push({ id: index * 2, content: figura, matched: false, pairIndex: 0, group: grupo});
+                baralho.push({ id: index * 2 + 1, content: descricoes[index], matched: false, pairIndex: 1, group: grupo});
+                grupo++;
             });
             shuffleArray(baralho);
             return baralho;
@@ -39,9 +40,10 @@
 
             useEffect(() => {
                 if (cartasViradas.length === 2) {
-                    const match = cartasViradas[0].figura === cartasViradas[1].figura;
+                    const match = cartasViradas[0].group === cartasViradas[1].group;
                     if (match) {
-                        setMatches([...matches, cartasViradas[0].figura]);
+                        const newMatches = [...matches, cartasViradas[0].group]; // Store matched groups instead of content
+                        setMatches(newMatches);
                         setCartasViradas([]);
                     } else {
                         setTimeout(() => setCartasViradas([]), 1000);
@@ -69,13 +71,14 @@
                     <Card
                         key={card.id}
                         id={card.id}
-                        figura={card.figura}
-                        isMatched={matches.includes(card.figura)}
-                        isFlipped={cartasViradas.some(carta => carta.id === card.id) || matches.includes(card.figura)}
+                        figura={card.content}
+                        isMatched={matches.includes(card.group)} // Check if the card's group is in the matches array
+                        isFlipped={cartasViradas.some(carta => carta.id === card.id) || matches.includes(card.group)} // Adjust flip condition
                         handleClick={handleClick}
+                        group={card.group}
                     />
                 ));
-            };
+        };
 
             return (
                 <>
