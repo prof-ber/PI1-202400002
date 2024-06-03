@@ -11,9 +11,12 @@ h1{
 }
 header{
     background-color: #7ae3fd;
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 nav{
     display: flex;
@@ -72,4 +75,9 @@ footer{
     background: #333;
     color: #fff;
     text-align: center;
+}
+#logo{
+    height: 100px;
+    display: flex;
+    
 }
