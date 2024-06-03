@@ -7,13 +7,15 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="jogo.css">
 </head>
 <body>
     <div id="app"></div>
     <script type="text/babel">
         const { useState, useEffect } = React; // Destructure useState and useEffect from React
 
-        const figuras = ['💀', '👻', '🎃', '🤡', '🦁', '🐯', '🐱', '🐼', '🦄', '✌️','🐵','🐋','🐧','🦖','🦕','🍉','🍌','🥥','🍫','🍟','🍪','🎅🏿','🍔','🍖','🦴','🦣','🐘','🦍','🍄','🦈','🦞','🍤','🍥','💩','🐶','🐨','🐻','🐷','🐭','🧀','🍕','🍺','🍷','🥖','🥩','🥚','🥓','🍩','🎂','🧁'];
+        const figuras = [ "😀","😂","😍","🤔","😎","😢","😡","😱","😴","😷","🤯","🥳","🥺","😇","🤖","👽","👻","🐱"];
+        const descricoes = ["sorriso", ]
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -24,8 +26,8 @@
         function inicializarBaralho() {
             const baralho = [];
             figuras.forEach((figura, index) => {
-                baralho.push({ id: index * 2, figura, matched: false });
-                baralho.push({ id: index * 2 + 1, figura, matched: false });
+                baralho.push({ id: index * 2, figura, matched: false, pairIndex: 0});
+                baralho.push({ id: index * 2 + 1, figura, matched: false, pairIndex: 1});
             });
             shuffleArray(baralho);
             return baralho;
@@ -90,9 +92,9 @@
             );
         }
 
-        function Card({ figura, isMatched, handleClick, id, isFlipped }) {
+        function Card({ figura, isMatched, handleClick, id, isFlipped, pairIndex }) {
             return(
-                <div className={`card ${isFlipped || isMatched ? 'flipped' : ''}`} onClick={() => handleClick(id)}>
+                <div className={`card ${isFlipped || isMatched ? 'flipped' : ''} pair-${pairIndex}`} onClick={() => handleClick(id)}>
                     {isFlipped || isMatched ? figura : '🤔'}
                 </div>
             );
