@@ -12,9 +12,12 @@ h1{
 }
 header {
     background-color: #7ae3fd;
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 nav {
     display: flex;
@@ -155,4 +158,9 @@ footer {
 }
 .palestra button:hover{
     background-color: #77d7e8;
+}
+#logo{
+    height: 100px;
+    display: flex;
+    
 }
