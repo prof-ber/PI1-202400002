@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.card{
+
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  
+
+}
+.jogo {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+gap: 030px;
+
+}
+.victory-overlay {
+  font-family: "Pixelify Sans", sans-serif;
+  text-align: center;
+}
+button {
+  font-family: "Pixelify Sans", sans-serif;
+  margin-top: 10px;
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+  transition: color 0.3s ease;
+}
