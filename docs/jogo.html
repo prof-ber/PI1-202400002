@@ -10,7 +10,20 @@
     <link rel="stylesheet" href="jogo.css">
 </head>
 <body>
+    <div class="header">
+        <img src="..\assets\brain-clip-art.svg" alt="logo" id="logo">
+        <h1>Vitrine da Mente</h1>
+    </div>
+    <div class="nav">
+        <a href="index.html">Início</a>
+            <a href="profissionais.html">Profissionais</a>
+            <a href="jogo.html">Jogo da memória</a>
+            <a href="simples.html">Página simples</a>
+            <a href="palestras.html">Palestras</a>
+    </div>
+  
     <div id="app"></div>
+    
     <script type="text/babel">
         const { useState, useEffect } = React;
         const figuras = [ 'PI/PI1-202400002/assets/beach-tennis_1.jpg',"PI/PI1-202400002/assets/basquete.webp","PI/PI1-202400002/assets/handebol.jpg","PI/PI1-202400002/assets/golfe.jpg","C:/Users/eminem.7994/Desktop/aiai/PI/PI1-202400002/assets/café.jpg","😢","😡","😱","😴","😷","🤯","🥳","🥺","😇","🤖","👽","👻","🐱"];
@@ -98,7 +111,7 @@
         function Card({ figura, isMatched, handleClick, id, isFlipped, pairIndex }) {
             return(
                 <div className={`card ${isFlipped || isMatched ? 'flipped' : ''} pair-${pairIndex}`} onClick={() => handleClick(id)}>
-                    {isFlipped || isMatched ? figura : '🤔'}
+                    <span className="content">{isFlipped || isMatched ? figura : '🤔'}</span>
                 </div>
             );
         }

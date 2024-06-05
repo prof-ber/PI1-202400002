@@ -1,36 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f4f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+body {
+    background-color: #ddd;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.card{
 
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  text-align: center;
-  
-
+.header {
+    background-color: #7ae3fd;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+}
+    
+.nav a {
+    padding: 14px 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+    
+.nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.nav {
+        display: flex;
+        justify-content: center;
+        background-color: #222;
+}
+        
+.nav a {
+        padding: 14px 20px;
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+}
+        
+.nav a:hover {
+        background-color: #ddd;
+        color: black;
+}
+
+#app {
+    margin-top: 80px; /* Espaço para o cabeçalho */
+}
+
 .jogo {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-gap: 030px;
+    display: grid;
+    grid-template-columns: repeat(6, 80px);
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    
+}
 
+.card {
+    width: 80px;
+    height: 80px;
+    background-color: #7ae3fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.content {
+    transform: rotateY(-180deg); /* Reverse the rotation of the content */
+}
+
 .victory-overlay {
-  font-family: "Pixelify Sans", sans-serif;
-  text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
 }
-button {
-  font-family: "Pixelify Sans", sans-serif;
-  margin-top: 10px;
-  border: 0px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: 0.3s ease;
-  transition: color 0.3s ease;
+
+.victory-message {
+    margin-bottom: 20px;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7ae3fd;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #7ae3fd;
+}
+#logo{
+    height: 100px;
+    display: flex;
+    
 }
