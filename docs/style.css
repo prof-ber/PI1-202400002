@@ -22,7 +22,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #222;
+    background-color: #000000;
 
 }
 nav a {
@@ -33,7 +33,7 @@ nav a {
 }
 nav a:hover {
     background-color: #ddd;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 .container {
     display: flex;
@@ -109,8 +109,15 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .material {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    background-color: #77d7e8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
 }
 .material img {
     width: 100%;
