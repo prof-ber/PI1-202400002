@@ -1,325 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitrine da Mente </title>
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
-body {
-font-family: "Poetsen One", sans-serif;
-font-weight: 400;
-font-style: normal;
-margin: 0;
-padding: 0;
-background-color: #f4f4f4;
-}
-
-.header {
-    background-color: #7ae3fd;
-    color: black;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav {
-display: flex;
-justify-content: center;
-background-color: #222;
-}
-
-.nav a {
-padding: 14px 20px;
-display: block;
-color: white;
-text-align: center;
-text-decoration: none;
-}
-
-.nav a:hover {
-background-color: #ddd;
-color: black;
-}
-
-.container {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 20px;
-}
-
-.section {
-width: 80%;
-margin: 20px 0;
-padding: 20px;
-border: 1px solid #ddd;
-border-radius: 8px;
-background-color: white;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.section h2 {
-margin-top: 0;
-}
-
-.row {
-display: flex;
-flex-wrap: wrap;
-}
-
-.col {
-flex: 1;
-min-width: 200px;
-margin: 10px;
-}
-
-.carousel {
-position: relative;
-width: 100%;
-max-width: 1500px;
-overflow: hidden;
-border: 1px solid #f3f3f3;
-border-radius: 10px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-inner {
-display: flex;
-transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-display: flex;
-align-items: center;
-min-width: 100%;
-padding: 20px;
-box-sizing: border-box;
-background-color: #fffefe;
-}
-
-.profile {
-display: flex;
-align-items: center;
-}
-
-.profile img {
-border-radius: 50%;
-margin-right: 20px;
-width: 200px;
-height: 200px;
-object-fit: cover;
-background-color: #222;
-margin-left: 30px;
-}
-
-.description {
-max-width: 70%;
-}
-
-button {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background-color: rgba(0, 0, 0, 0.5);
-color: rgb(255, 255, 255);
-border: none;
-padding: 10px;
-cursor: pointer;
-z-index: 1;
-transition: background-color 0.3s ease, transform 0.3s ease; /* Adicione a propriedade transition aqui */
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Mude a cor do background no hover */
-    transform: scale(1.1); /* Aumente o botão ligeiramente no hover */
-}
-
-button.prev {
-left: 10px;
-}
-
-button.next {
-right: 10px;
-}
-
-h1 {
-text-align: center;
-}
-
-ul {
-list-style-type: none;
-padding: 0;
-}
-
-li {
-margin: 10px 0;
-}
-
-.categoria {
-margin-top: 30px;
-columns: 5;
-}
-
-#logo{
-     height: 100px;
-     display: flex;
-     
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="header">
+    <header>
         <img src="../assets/brain-clip-art.svg" alt="logo" id="logo">
-        <h1>Vitrine da Mente</h1>
-    </div>
-    <div class="nav">
+        <h1>Bem-vindos ao Vitrine da Mente</h1>
+    </header>
+    <nav>
         <a href="index.html">Início</a>
-            <a href="profissionais.html">Profissionais</a>
-            <a href="jogo.html">Jogo da memória</a>
-            <a href="simples.html">Página simples</a>
-            <a href="palestras.html">Palestras</a>
-    </div>
-    <div class="container">
-        <div id="medicos" class="section">
-            <h2>Nossos profissionais em destaque</h2>
-            
-          <div class="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="profile">
-                    <img src="profissional1.jpg" alt="">
-                    <div class="description">
-                        <h3>Profissional 1</h3>
-                        <p>Descrição do profissional 1.</p>
-                    </div>
+        <a href="profissionais.html">Profissionais</a>
+        <a href="jogo.html">Jogo da memória</a>
+        <a href="simples.html">Página simples</a>
+        <a href="palestras.html">Palestras</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Sobre nós</h2>
+            <p>O Vitrine da Mente é dedicado a oferecer um ambiente acolhedor para pessoas em necessidade, enquanto aprimora as capacidades mentais de todos os nossos visitantes. Nosso objetivo é proporcionar suporte e recursos que promovam o bem-estar mental e o crescimento pessoal.</p>
+        </section>
+        <section>
+            <h2>Como usar o site</h2>
+            <p>Bem-vindo ao Vitrine da Mente! Aqui estão algumas instruções para ajudá-lo a navegar e utilizar nosso site:</p>
+            <ul>
+                <li><strong>Início:</strong> Clique em "Início" para voltar à página principal, onde você encontrará informações gerais sobre nossa missão e objetivos.</li>
+                <li><strong>Contatos:</strong> Na seção "Contatos", você encontrará informações sobre como entrar em contato com nossa equipe. Use esta página para obter suporte ou fazer perguntas.</li>
+                <li><strong>Palestras:</strong> Clique em "Palestras" para explorar as palestras que oferecemos. Aqui você pode se inscrever para participar de eventos e workshops.</li>
+                <li><strong>Página:</strong> A seção "Página" contém recursos adicionais e informações detalhadas sobre nossos serviços e projetos.</li>
+            </ul>
+            <p>Se tiver qualquer dúvida ou precisar de mais informações, não hesite em entrar em contato conosco através da seção de Contatos.</p>
+        </section>
+        <section class="featured-materials">
+            <h2>Materiais em Destaque</h2>
+            <div class="materials">
+                <div class="material">
+                    <img src="https://th.bing.com/th/id/R.cb4c2cbc7225ad074b7e1f840e7f75ef?rik=%2baLU%2btFDS%2fwPAg&pid=ImgRaw&r=0" alt="Material 1">
+                    <h3>Material 1</h3>
+                    <p>Descrição breve sobre o material 1. Este recurso é ideal para ajudar você a começar a explorar sua mente.</p>
+                </div>
+                <div class="material">
+                    <img src="https://th.bing.com/th/id/R.f651fbcc03d5ea2e9c354aabd28141ab?rik=WNHSbti65KuzEg&riu=http%3a%2f%2fs3.amazonaws.com%2fibc-portal%2fwp-content%2fuploads%2f2016%2f03%2f20132118%2fFotolia_73243812_Subscription_Monthly_M.jpg&ehk=bjEJLvyEu58GUWziV1p9cQ2NDcuICcD2QseyiyQNSpw%3d&risl=&pid=ImgRaw&r=0" alt="Material 2">
+                    <h3>Material 2</h3>
+                    <p>Descrição breve sobre o material 2. Um guia completo para aprimorar suas habilidades mentais.</p>
+                </div>
+                <div class="material">
+                    <img src="https://th.bing.com/th/id/R.cb02cffbec0ecf6b72d714d98f5796d1?rik=zKY9n1Cjc9ZmGw&pid=ImgRaw&r=0" alt="Material 3">
+                    <h3>Material 3</h3>
+                    <p>Descrição breve sobre o material 3. Ferramentas e técnicas para o desenvolvimento pessoal.</p>
+                </div>
+                <div class="material">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.iFdU-pL8PUsNfNr09EtoCwHaE8?rs=1&pid=ImgDetMain" alt="Material 4">
+                    <h3>Material 4</h3>
+                    <p>Descrição breve sobre o material 4. O objetivo do material 4, é ajudar a pessoa a ter mais resiliência.</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="profile">
-                    <img src="profissional2.jpg" alt="">
-                    <div class="description">
-                        <h3>Profissional 2</h3>
-                        <p>Descrição do profissional 2.</p>
-                    </div>
-                </div>
+        </section>
+        <section>
+            <h2>Nossos serviços</h2>
+            <p>Oferecemos consultoria especializada para ajudar você a alcançar seu potencial máximo.</p>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="thank-you-message" id="thank-you-message">
+                Muito obrigado pela sua opinião!
             </div>
-            <div class="carousel-item">
-                <div class="profile">
-                    <img src="profissional3.jpg" alt="">
-                    <div class="description">
-                        <h3>Profissional 3</h3>
-                        <p>Descrição do profissional 3.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="profile">
-                    <img src="profissional4.jpg" alt="">
-                    <div class="description">
-                        <h3>Profissional 4</h3>
-                        <p>Descrição do profissional 4.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="profile">
-                    <img src="profissional5.jpg" alt="">
-                    <div class="description">
-                        <h3>Profissional 5</h3>
-                        <p>Descrição do profissional 5.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="profile">
-                    <img src="profissional6.jpg" alt="">
-                    <div class="description">
-                        <h3>Profissional 6</h3>
-                        <p>Descrição do profissional 6.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="profile">
-                    <img src="profissional7.jpg" alt="">
-                    <div class="description">
-                        <h3>Profissional 7</h3>
-                        <p>Descrição do profissional 7.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-   
-  
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
-    </div>
-    <h1>Lista dos Nossos Profissionais</h1>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Vitrine da Mente. Todos os direitos reservados.</p>
+    </footer>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
+        import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
     
-    <div class="categoria">
-        <h2>Médicos</h2>
-        <ul>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-        </ul>
-    </div>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAGG-Gdo9wmT4vZyHv79RH0mu0i0RCD3rQ",
+            authDomain: "pi1-202400002.firebaseapp.com",
+            projectId: "pi1-202400002",
+            storageBucket: "pi1-202400002.appspot.com",
+            messagingSenderId: "422525684080",
+            appId: "1:422525684080:web:8b6ef717a7e43c861d27b5"
+        };
     
-    <div class="categoria">
-        <h2>Psicólogos</h2>
-        <ul>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-        </ul>
-    </div>
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
     
-    <div class="categoria">
-        <h2>Terapeutas</h2>
-        <ul>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-            <li>Nome do doutor - Especialidade - Descrição do Profissional</li>
-        </ul>
-    </div>
-       
-    <script>
-       let currentIndex = 0;
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
-
-    if (index >= totalSlides) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = totalSlides - 1;
-    } else {
-        currentIndex = index;
-    }
-
-    const offset = -currentIndex * 100;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-}
-
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentIndex);
-});
-
+        // Create a post
+        async function createPost(nome, email, mensagem) {
+            try {
+                const docRef = await addDoc(collection(db, "contatos"), {
+                    nome: nome,
+                    email: email,
+                    mensagem: mensagem,
+                    timestamp: serverTimestamp()
+                });
+                console.log("Contato enviado. Protocolo: ", docRef.id);
+            } catch (error) {
+                console.error("Erro enviando formulário: ", error);
+            }
+        }
+    
+        // Event listener for form submission
+        document.getElementById('contact-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+    
+            const postNome = document.getElementById('name').value;
+            const postEmail = document.getElementById('email').value;
+            const postMessage = document.getElementById('message').value;
+    
+            await createPost(postNome, postEmail, postMessage);
+    
+            // Clear the form
+            document.getElementById('contact-form').reset();
+    
+            // Show thank you message
+            document.getElementById('thank-you-message').style.display = 'block';
+    
+            // Hide thank you message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('thank-you-message').style.display = 'none';
+            }, 5000);
+        });
     </script>
 </body>
 </html>
