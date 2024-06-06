@@ -85,6 +85,19 @@ footer{
     display: flex;
     
 }
+#conteudo{
+    top: -40px;
+    left: 0;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+#conteudo:focus{
+    top: 0;
+}
+.skip-link{
+    position: absolute; top: -100px;
+}
 .thank-you-message {
     display: none;
     margin-top: 20px;
