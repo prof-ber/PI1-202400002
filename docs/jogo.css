@@ -42,7 +42,7 @@ body {
 .nav {
         display: flex;
         justify-content: center;
-        background-color: #222;
+        background-color: black;
 }
         
 .nav a {
