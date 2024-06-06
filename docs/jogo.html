@@ -26,12 +26,12 @@
     
     <script type="text/babel">
         const { useState, useEffect } = React;
-        const figuras = ['PI/PI1-202400002/assets/beach-tennis_1.jpg',"PI/PI1-202400002/assets/basquete.webp","PI/PI1-202400002/assets/handebol.jpg",
-        "PI/PI1-202400002/assets/golfe.jpg","C:/Users/eminem.7994/Desktop/aiai/PI/PI1-202400002/assets/café.jpg","PI/PI1-202400002/assets/atividade fisica.jpg",
-        "PI/PI1-202400002/assets/caminhada.webp","PI/PI1-202400002/assets/futsal.jpg","PI/PI1-202400002/assets/quiropraxia.jpg",
-        "PI/PI1-202400002/assets/boliche.jpg","PI/PI1-202400002/assets/hidroginastica.jpeg","PI/PI1-202400002/assets/video games.jpg",
-        "PI/PI1-202400002/assetsleitura.jpg","PI/PI1-202400002/assets/pilates.jpg","PI/PI1-202400002/assets/ouvir musica.webp",
-        "PI/PI1-202400002/assets/massagem.jpg","PI/PI1-202400002/assets/volei.jpg","PI/PI1-202400002/assets/ciclismo.webp"];
+        const figuras = ['../assets/beach-tennis_1.jpg',"../assets/basquete.webp","../assets/handebol.jpg",
+        "../assets/golfe.jpg","../assets/café.jpg","../assets/atividade fisica.jpg",
+        "../assets/caminhada.webp","../assets/futsal.jpg","../assets/quiropraxia.jpg",
+        "../assets/boliche.jpg","../assets/hidroginastica.jpeg","../assets/video games.jpg",
+        "../assets/leitura.jpg","../assets/pilates.jpg","../assets/ouvir musica.webp",
+        "../assets/massagem.jpg","../assets/volei.jpg","../assets/ciclismo.webp"];
         const descricoes = ["Beach tennis combina exercício e diversão, promovendo um bom condicionamento físico e relaxamento na praia.",
         "Basquete é ótimo para saúde, aumenta resistência, coordenação e sociabilidade, fortalece músculos e ossos.",
         "Handebol melhora cardio, circulação, tonifica músculos e aprimora coordenação.",
@@ -130,13 +130,18 @@
             );
         }
 
-        function Card({ figura, isMatched, handleClick, id, isFlipped, pairIndex }) {
-            return(
-                <div className={`card ${isFlipped || isMatched ? 'flipped' : ''} pair-${pairIndex}`} onClick={() => handleClick(id)}>
-                    <span className="content">{isFlipped || isMatched ? figura : '🤔'}</span>
-                </div>
-            );
-        }
+    function Card({ figura, isMatched, handleClick, id, isFlipped, pairIndex }) {
+        const isImage = /\.(jpg|jpeg|png|webp)$/.test(figura);
+        return(
+            <div className={`card ${isFlipped || isMatched ? 'flipped' : ''} pair-${pairIndex}`} onClick={() => handleClick(id)}>
+                {isFlipped || isMatched ? (
+                    isImage ? <img src={figura} alt="Card image" className="card-image"/> : <span className="content">{figura}</span>
+                ) : (
+                    <span className="content">🤔</span>
+                )}
+            </div>
+        );
+    }
 
         ReactDOM.render(<App />, document.getElementById('app'));
     </script>
