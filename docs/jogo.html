@@ -26,12 +26,12 @@
     
     <script type="text/babel">
         const { useState, useEffect } = React;
-        const figuras = ['../assets/beach-tennis_1.jpg',"../assets/basquete.webp","../assets/handebol.jpg",
+        const figuras = ['../assets/beach-tennis_1.jpg',"../assets/basquete.png","../assets/handebol.jpg",
         "../assets/golfe.jpg","../assets/café.jpg","../assets/atividade fisica.jpg",
-        "../assets/caminhada.webp","../assets/futsal.jpg","../assets/quiropraxia.jpg",
+        "../assets/caminhada.png","../assets/messi-copa-do-mundo1-aspect-ratio-512-320.jpg","../assets/quiropraxia-3-1.jpg",
         "../assets/boliche.jpg","../assets/hidroginastica.jpeg","../assets/video games.jpg",
-        "../assets/leitura.jpg","../assets/pilates.jpg","../assets/ouvir musica.webp",
-        "../assets/massagem.jpg","../assets/volei.jpg","../assets/ciclismo.webp"];
+        "../assets/leitura.jpg","../assets/pilates.jpg","../assets/mulher-ouvindo-musica-1511535013801_v2_4x3.jpg",
+        "../assets/massagem.jpg","../assets/volei (1).jpg","../assets/ciclismo.png"];
         const descricoes = ["Beach tennis combina exercício e diversão, promove um bom condicionamento físico e relaxamento na praia.",
         "Basquete é ótimo para saúde, aumenta resistência, coordenação e sociabilidade, fortalece músculos e ossos.",
         "Handebol melhora cardio, circulação, tonifica músculos e aprimora coordenação.",
@@ -39,7 +39,7 @@
         "Polifenóis no café reduz inflamações, melhoram o humor, reduz ansiedade e promove concentração e memória.",
         "Atividade física acalma e reorganiza pensamentos e emoções, melhora o foco e controle da ansiedade.",
         "Caminhada reduz estresse e ansiedade, melhora autoestima, reduz o hormônio do estresse.",
-        "Esportes em equipe como o futsal, traz sensação de bem-estar, e melhora a autoestima.",
+        "Esportes em equipe como o futebol, traz sensação de bem-estar, e melhora a autoestima.",
         "Quiropraxia melhora bem-estar geral, reduz estresse, melhora  a qualidade do sono.",
         "Boliche relaxa mente e corpo, libera endorfina para reduzir estresse e regular hormônios.",
         "Hidroginástica: Exercício na água para saúde e bem-estar.",
@@ -137,7 +137,7 @@
                 {isFlipped || isMatched ? (
                     isImage ? <img src={figura} alt="Card image" className="card-image"/> : <span className="content">{figura}</span>
                 ) : (
-                    <span className="content">🤔</span>
+                    <span className="content thinking">🤔</span>
                 )}
             </div>
         );
