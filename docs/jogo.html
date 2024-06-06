@@ -28,12 +28,26 @@
     
     <script type="text/babel">
         const { useState, useEffect } = React;
-        const figuras = ['assets/beach-tennis_1.jpg',"assets/basquete.png","assets/handebol.jpg",
-        "assets/golfe.jpg","assets/café.jpg","assetsatividade fisica.jpg",
-        "assets/caminhada.png","assets/messi-copa-do-mundo1-aspect-ratio-512-320.jpg","assets/quiropraxia-3-1.jpg",
-        "assets/boliche.jpg","assets/hidroginastica.jpeg","assets/video games.jpg",
-        "assets/leitura.jpg","assets/pilates.jpg","assets/mulher-ouvindo-musica-1511535013801_v2_4x3.jpg",
-        "assets/massagem.jpg","assets/volei (1).jpg","assets/ciclismo.png"];
+    const figuras = [
+        {src: "assets/beach-tennis_1.jpg", alt: "Jogadores de beach tennis"},
+        {src: "assets/basquete.png", alt: "Jogador de basquete preparando para arremessar"},
+        {src: "assets/handebol.jpg", alt: "Jogador de handebol atacando"},
+        {src: "assets/golfe.jpg", alt: "Jogador de golfe no campo"},
+        {src: "assets/café.jpg", alt: "Xícara de café"},
+        {src: "assets/atividade fisica.jpg", alt: "Pessoa fazendo atividade física ao ar livre"},
+        {src: "assets/caminhada.png", alt: "Pessoas fazendo caminhada"},
+        {src: "assets/messi-copa-do-mundo1-aspect-ratio-512-320.jpg", alt: "Jogador Lionel Messi comemorando gol"},
+        {src: "assets/quiropraxia-3-1.jpg", alt: "Sessão de quiropraxia"},
+        {src: "assets/boliche.jpg", alt: "Pista de boliche"},
+        {src: "assets/hidroginastica.jpeg", alt: "Aula de hidroginástica"},
+        {src: "assets/video games.jpg", alt: "Controles de videogame"},
+        {src: "assets/leitura.jpg", alt: "Livro aberto com óculos"},
+        {src: "assets/pilates.jpg", alt: "Pessoa praticando pilates"},
+        {src: "assets/mulher-ouvindo-musica-1511535013801_v2_4x3.jpg", alt: "Mulher ouvindo música com fones de ouvido"},
+        {src: "assets/massagem.jpg", alt: "Sessão de massagem"},
+        {src: "assets/volei (1).jpg", alt: "Jogo de vôlei na praia"},
+        {src: "assets/ciclismo.png", alt: "Pessoa praticando ciclismo"}
+    ];
         const descricoes = ["Beach tennis combina exercício e diversão, promove um bom condicionamento físico e relaxamento na praia.",
         "Basquete é ótimo para saúde, aumenta resistência, coordenação e sociabilidade, fortalece músculos e ossos.",
         "Handebol melhora cardio, circulação, tonifica músculos e aprimora coordenação.",
@@ -133,11 +147,11 @@
         }
 
     function Card({ figura, isMatched, handleClick, id, isFlipped, pairIndex }) {
-        const isImage = /\.(jpg|jpeg|png|webp)$/.test(figura);
+        const isImage = /\.(jpg|jpeg|png|webp)$/.test(figura.src);
         return(
             <div className={`card ${isFlipped || isMatched ? 'flipped' : ''} pair-${pairIndex}`} onClick={() => handleClick(id)}>
                 {isFlipped || isMatched ? (
-                    isImage ? <img src={figura} alt="Card image" className="card-image"/> : <span className="content">{figura}</span>
+                    isImage ? <img src={figura.src} alt={figura.alt} className="card-image"/> : <span className="content">{figura}</span>
                 ) : (
                     <span className="content thinking">🤔</span>
                 )}
