@@ -26,8 +26,30 @@
     
     <script type="text/babel">
         const { useState, useEffect } = React;
-        const figuras = [ 'PI/PI1-202400002/assets/beach-tennis_1.jpg',"PI/PI1-202400002/assets/basquete.webp","PI/PI1-202400002/assets/handebol.jpg","PI/PI1-202400002/assets/golfe.jpg","C:/Users/eminem.7994/Desktop/aiai/PI/PI1-202400002/assets/café.jpg","😢","😡","😱","😴","😷","🤯","🥳","🥺","😇","🤖","👽","👻","🐱"];
-        const descricoes = ["Jogar beach tennis proporciona uma mistura singular de atividade física,diversão e interação social. Alguns benefícios incluem aprimoramento da coordenação, condicionamento físico, agilidade e habilidades motoras, além de ser uma excelente forma de aproveitar o ar livre e relaxar na praia", "Jogar basquete é uma excelente forma de exercício que oferece uma variedade de benefícios. Ele melhora a saúde cardiovascular, aumenta a resistência, promove a coordenação e agilidade, fortalece os músculos e ossos, além de ser uma ótima maneira de desenvolver habilidades sociais, como trabalho em equipe e comunicação", "O handebol melhora o desempenho cardiorespiratório e a circulação sanguínea, tonifica a musculatura do corpo inteiro, aprimora a coordenação motora", "O golfe é um esporte que visa ensinar concentração e precisão, ao mesmo tempo que encoraja a criatividade e o pensamento criativo.", "", "chorando", "zangado", "assustado", "dormindo", "doente", "cabeça explodindo", "comemorando", "implorando", "angelical", "robô", "alienígena", "fantasma", "gato"];
+        const figuras = ['PI/PI1-202400002/assets/beach-tennis_1.jpg',"PI/PI1-202400002/assets/basquete.webp","PI/PI1-202400002/assets/handebol.jpg",
+        "PI/PI1-202400002/assets/golfe.jpg","C:/Users/eminem.7994/Desktop/aiai/PI/PI1-202400002/assets/café.jpg","PI/PI1-202400002/assets/atividade fisica.jpg",
+        "PI/PI1-202400002/assets/caminhada.webp","PI/PI1-202400002/assets/futsal.jpg","PI/PI1-202400002/assets/quiropraxia.jpg",
+        "PI/PI1-202400002/assets/boliche.jpg","PI/PI1-202400002/assets/hidroginastica.jpeg","PI/PI1-202400002/assets/video games.jpg",
+        "PI/PI1-202400002/assetsleitura.jpg","PI/PI1-202400002/assets/pilates.jpg","PI/PI1-202400002/assets/ouvir musica.webp",
+        "PI/PI1-202400002/assets/massagem.jpg","PI/PI1-202400002/assets/volei.jpg","PI/PI1-202400002/assets/ciclismo.webp"];
+        const descricoes = ["Beach tennis combina exercício e diversão, promovendo um bom condicionamento físico e relaxamento na praia.",
+        "Basquete é ótimo para saúde, aumenta resistência, coordenação e sociabilidade, fortalece músculos e ossos.",
+        "Handebol melhora cardio, circulação, tonifica músculos e aprimora coordenação.",
+        "Golfe ensina concentração, precisão, encoraja criatividade e pensamento criativo.",
+        "Polifenóis no café reduz inflamações, melhoram o humor, reduz ansiedade e promove concentração e memória.",
+        "Atividade física acalma e reorganiza pensamentos e emoções, melhorando foco e controle da ansiedade.",
+        "Caminhada e corrida reduzem estresse e ansiedade, melhoram autoestima e reduzem cortisol, hormônio do estresse.",
+        "Esportes em equipe como o futsal, trazem sensação de bem-estar, melhorando a autoestima e sua saúde mental.",
+        "Quiropraxia melhora bem-estar geral, reduzindo estresse e melhorando qualidade do sono, proporcionando relaxamento.",
+        "Boliche relaxa mente e corpo, liberando endorfina para reduzir estresse ao regular hormônios.",
+        "Hidroginástica: Exercício na água para saúde e bem-estar.",
+        "Video games são entretenimento interativo, oferecendo diversão e desafio, além de estimular habilidades cognitivas e sociais.",
+        "A leitura é um exercício mental que envolve imaginação, aprendizagem e antecipação, estimulando o cérebro.",
+        "Pilates reduz fadiga, sintomas de depressão e ansiedade, e aumenta disposição.",
+        "Ouvir música reduz ansiedade, aumenta a dopamina, melhora comunicação e socialização, e é um exercício mental.",
+        "Massagens relaxam corpo e mente. Focar na mente durante a massagem é essencial para o relaxamento completo.",
+        "Vôlei promove bem-estar mental ao reduzir estresse, melhorar concentração e autoconfiança, além de facilitar socialização.",
+        "Ciclismo beneficia saúde mental, reduzindo estresse, melhorando humor, aliviando ansiedade, aumentando autoestima e conectando-se com a natureza para promover bem-estar emocional."];
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
