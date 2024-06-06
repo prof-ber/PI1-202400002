@@ -7,6 +7,7 @@
     <title>Vitrine da Mente</title>
 </head>
 <body>
+    <a href="#conteudo" class="skip-link">Ir para o conteúdo principal</a>
     <header>
         <img src="../assets/brain-clip-art.svg" alt="logo" id="logo">
         <h1>Bem-vindos ao Vitrine da Mente</h1>
@@ -22,7 +23,7 @@
     </nav>
     <main>
         <section>
-            <h2>Sobre nós</h2>
+            <h2 id="conteudo">Sobre nós</h2>
             <p>O Vitrine da Mente é dedicado a oferecer um ambiente acolhedor para pessoas em necessidade, enquanto aprimora as capacidades mentais de todos os nossos visitantes. Nosso objetivo é proporcionar suporte e recursos que promovam o bem-estar mental e o crescimento pessoal.</p>
         </section>
         <section>
@@ -66,11 +67,11 @@
             <p>Oferecemos consultoria especializada para ajudar você a alcançar seu potencial máximo.</p>
             <form>
                 <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome, exemplo, Eduardo Vieira" required>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email, exemplo, eduardo@exemplo.com" required>
                     <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" placeholder="Digite uma mensagem, exemplo, Oi, gostaria de tirar uma dúvida" required></textarea>
                     <button type="submit">Enviar</button>
             </form>
         </section>
