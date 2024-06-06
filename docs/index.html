@@ -7,6 +7,7 @@
     <title>Vitrine da Mente</title>
 </head>
 <body>
+    <a href="#conteudo" class="skip-link">Ir para o conteúdo principal</a>
     <header>
         <img src="../assets/brain-clip-art.svg" alt="logo" id="logo">
         <h1>Bem-vindos ao Vitrine da Mente</h1>
@@ -22,7 +23,7 @@
     </nav>
     <main>
         <section>
-            <h2>Sobre nós</h2>
+            <h2 id="conteudo">Sobre nós</h2>
             <p>O Vitrine da Mente é dedicado a oferecer um ambiente acolhedor para pessoas em necessidade, enquanto aprimora as capacidades mentais de todos os nossos visitantes. Nosso objetivo é proporcionar suporte e recursos que promovam o bem-estar mental e o crescimento pessoal.</p>
         </section>
         <section>
@@ -64,19 +65,74 @@
             </section>
             <h2>Nossos serviços</h2>
             <p>Oferecemos consultoria especializada para ajudar você a alcançar seu potencial máximo.</p>
-            <form>
+            <form id="contact-form">
                 <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome, exemplo, Eduardo Vieira" required>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email, exemplo, eduardo@exemplo.com" required>
                     <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Enviar</button>
+                    <textarea id="message" name="message" placeholder="Digite uma mensagem, exemplo, Oi, gostaria de tirar uma dúvida" required></textarea>
             </form>
+            <button id="post-btn">Enviar</button>
+            <div class="thank-you-message" id="thank-you-message">
+                Muito obrigado pela sua opinião!
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Vitrine da Mente. Todos os direitos reservados.</p>
     </footer>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
+        import { getFirestore, collection, addDoc, query, where, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyAGG-Gdo9wmT4vZyHv79RH0mu0i0RCD3rQ",
+        authDomain: "pi1-202400002.firebaseapp.com",
+        projectId: "pi1-202400002",
+        storageBucket: "pi1-202400002.appspot.com",
+        messagingSenderId: "422525684080",
+        appId: "1:422525684080:web:8b6ef717a7e43c861d27b5"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Create a post
+        async function createPost(nome,email,mensagem) {
+        try {
+            const docRef = await addDoc(collection(db, "contatos"), {
+            nome: nome,
+            email: email,
+            mensagem: mensagem,
+            timestamp: serverTimestamp()
+            });
+            console.log("Contato enviado. Protocolo: ", docRef.id);
+        } catch (error) {
+            console.error("Erro enviando formulário: ", error);
+        }
+        }
+
+        // Event listener for Post button
+        document.getElementById('post-btn').addEventListener('click', () => {
+        // Assuming you have a way to get the current user's ID
+        const postNome = document.getElementById('name').value;
+        const postEmail = document.getElementById('email').value;
+        const postMessage = document.getElementById('message').value;
+        createPost(postNome, postEmail, postMessage);
+        document.getElementById('contact-form').reset();
+
+            // Show thank you message
+            document.getElementById('thank-you-message').style.display = 'block';
+
+            // Hide thank you message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('thank-you-message').style.display = 'none';
+            }, 5000);
+        });
+
+    </script>
 </body>
 </html>
