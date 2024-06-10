@@ -218,3 +218,135 @@ footer {
 #email{
     width: 77vw;
 }
+#app {
+    margin-top: 80px; /* Espaço para o cabeçalho */
+}
+
+.jogo {
+    display: grid;
+    grid-template-columns: repeat(6, 70px);
+    grid-template-rows: repeat(6,70px);
+    gap: 90px;
+    margin-top: -70px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: #7ae3fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15.5px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.content {
+    transform: rotateY(-180deg); /* Reverse the rotation of the content */
+}
+
+.victory-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+}
+
+.victory-message {
+    margin-bottom: 20px;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7ae3fd;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #7ae3fd;
+}
+#logo{
+    height: 100px;
+    display: flex;
+    
+}
+#conteudo{
+    top: -40px;
+    left: 0;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+#conteudo:focus{
+    top: 0;
+}
+.skip-link{
+    position: absolute; top: -100px;
+}
+.card-image {
+height: 150px;
+width: 150px;
+
+
+}
+.thinking {
+    font-size: 64px;
+}
+@media (min-width: 200px) and (max-width: 844px) {
+    body {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .card {
+        width: 75px;
+        height: 75px;
+        background-color: #7ae3fd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 7.91px;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.9s;
+        overflow: hidden;
+        font-weight: 550;
+        }
+    .card-image {
+        height: 75px;
+        width: 75px;
+        }
+        .jogo {
+            display: grid;
+            grid-template-columns: repeat(4, 70px);
+            grid-template-rows: repeat(9,70px);
+            gap: 11px;
+            margin-top: -70px;
+            text-align: center;
+            justify-content: center;
+        }
+    }
