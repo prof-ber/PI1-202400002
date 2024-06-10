@@ -85,7 +85,6 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s;
-    overflow: hidden;
 }
 
 .card.flipped {
@@ -155,4 +154,39 @@ width: 150px;
 }
 .thinking {
     font-size: 64px;
+}
+@media (min-width: 200px) and (max-width: 844px) {
+    body {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .card {
+        width: 75px;
+        height: 75px;
+        background-color: #7ae3fd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8.7px;
+        border: 2px solid #000000;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        overflow: hidden;
+    }
+    .card-image {
+        height: 75px;
+        width: 75px;
+        }
+        .jogo {
+            display: grid;
+            grid-template-columns: repeat(6, 70px);
+            grid-template-rows: repeat(6,70px);
+            gap: 13px;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+            
+        }
 }
