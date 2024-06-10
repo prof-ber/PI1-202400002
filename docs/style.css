@@ -117,8 +117,7 @@ footer {
 .materials {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 69px;
-   margin: 30px;
+    gap: 20px;
 }
 .material {
     background-color: #77d7e8;
@@ -128,7 +127,7 @@ footer {
     overflow: hidden;
     width: 200px;
     text-align: center;
-    margin: 5px;
+    margin: 0 auto;
     padding: 10px;
 }
 .material img {
