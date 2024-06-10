@@ -168,23 +168,24 @@ width: 150px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 8.7px;
-        border: 2px solid #000000;
+        font-size: 7.91px;
+        border: 1px solid #000000;
         border-radius: 8px;
         cursor: pointer;
-        transition: transform 0.3s;
+        transition: transform 0.9s;
         overflow: hidden;
-    }
+        font-weight: 550;
+        }
     .card-image {
         height: 75px;
         width: 75px;
         }
         .jogo {
             display: grid;
-            grid-template-columns: repeat(6, 70px);
-            grid-template-rows: repeat(6,70px);
-            gap: 13px;
-            margin-bottom: 20px;
+            grid-template-columns: repeat(4, 70px);
+            grid-template-rows: repeat(9,70px);
+            gap: 11px;
+            margin-top: -70px;
             text-align: center;
             justify-content: center;
             
