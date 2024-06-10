@@ -220,13 +220,14 @@ footer {
 }
 #app {
     margin-top: 80px; /* Espaço para o cabeçalho */
+    width: 100%;
 }
 
 .jogo {
     display: grid;
-    grid-template-columns: repeat(6, 70px);
-    grid-template-rows: repeat(6,70px);
-    gap: 90px;
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: repeat(6,150px);
+    gap: 11px;
     margin-top: -70px;
     text-align: center;
     justify-content: center;
@@ -322,13 +323,13 @@ width: 150px;
         
     }
     .card {
-        width: 75px;
-        height: 75px;
+        width: 70.25px;
+        height: 70.25px;
         background-color: #7ae3fd;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 7.91px;
+        font-size: 7.2px;
         border: 1px solid #000000;
         border-radius: 8px;
         cursor: pointer;
