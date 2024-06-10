@@ -7,25 +7,26 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link rel="stylesheet" href="jogo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a href="#conteudo" class="skip-link">Ir para o conteúdo principal</a>
-    <div style="display: none;" id="conteudo"></div>
-    <div class="header">
+    <header>
         <img src="assets/brain-clip-art.svg" alt="logo" id="logo">
         <h1>Vitrine da Mente</h1>
-    </div>
-    <div class="nav">
-        <a href="index.html">Início</a>
+    </header>
+    <nav>
+        
+            <a href="index.html">Início</a>
             <a href="profissionais.html">Profissionais</a>
             <a href="jogo.html">Jogo da memória</a>
             <a href="simples.html">Página simples</a>
             <a href="palestras.html">Palestras</a>
+
+    </nav>
+    <div style="display: flex; justify-content: center; width: auto;">
+        <div id="app"></div>
     </div>
-  
-    <div id="app"></div>
-    
     <script type="text/babel">
         const { useState, useEffect } = React;
     const figuras = [
@@ -161,5 +162,8 @@
 
         ReactDOM.render(<App />, document.getElementById('app'));
     </script>
+    <style>
+
+    </style>
 </body>
 </html>
